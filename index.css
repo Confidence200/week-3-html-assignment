@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6fb;
+  color: #222;
+}
+
+header{
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  grid-template-rows: auto auto 1fr auto;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #e2e5ee;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  
+}
+
+.card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4f46e5;
+  border: 2px solid #222;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing {
+  padding: 20px;
+}
+
+.card-header {
+  text-align: center;
+}
+
+.card-header h2 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.card-header p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.card-price {
+  text-align: center;
+}
+
+.amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.period {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 10px;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 12px 0;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.card.popular .button {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.card.popular {
+border-color: #4f46e5;
+box-shadow: 0 8px 30px rgba(79, 70, 229, 0.3);
+
+.card:has(input:checked) {
+  background-color: #c7d2fe;
+  border-color: #3730a3;
+}
+
+.card:has(input:checked) .button {
+  background-color: #4f46e5;
+  color: #fff;
+}
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card:has(input:checked) {
+  background-color: #c7d2fe;
+  border-color: #3730a3;
+}
+
+.card:has(input:checked) .button {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
